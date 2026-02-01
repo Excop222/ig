@@ -1,0 +1,189 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND (Instagram white space) */
+body {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* PHONE FRAME */
+.phone {
+  width: min(100vw, 390px);     /* responsive width */
+  height: min(100vh, 820px);    /* responsive height */
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;             /* IMPORTANT */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* TOP BAR */
+.top-bar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background: #000;
+  z-index: 10;
+}
+
+/* REELS SCROLLER */
+.reels {
+  flex: 1;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  padding: 12px 0;
+}
+
+/* EACH REEL SLOT */
+.reel {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+/* REEL CARD (THIS IS THE MAGIC) */
+.reel-box {
+  width: 92%;
+  aspect-ratio: 9 / 16;        /* Instagram reel ratio */
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* VIDEO / IMAGE */
+.reel-box video,
+.reel-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* crops nicely */
+}
+
+/* CAPTION */
+.caption {
+  position: absolute;
+  left: 12px;
+  bottom: 16px;
+  max-width: 75%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* SPEAKER BUTTON */
+.speaker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  border: none;
+  padding: 6px;
+}
+
+.speaker svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+/* SIDE ICON COLUMN */
+.icon-column {
+  position: absolute;
+  right: 10px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ICON BUTTON */
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-btn svg {
+  width: 26px;
+  height: 26px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
+
+.icon-btn .count {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  height: 56px;
+  background: #000;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-nav svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* CREATE OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.create-box {
+  width: 90%;
+  max-width: 320px;
+  background: #111;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

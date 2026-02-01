@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vibeX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<div class="phone">
+
+  <!-- HEADER -->
+  <header class="top-bar">
+    <span class="logo">vibeX</span>
+  </header>
+
+  <!-- REELS FEED -->
+  <main class="reels">
+
+    <!-- REEL -->
+    <section class="reel">
+        <div class="reel-box">
+      <video src="video2.mp4" autoplay muted loop playsinline></video>
+
+      <!-- SPEAKER -->
+      <button class="speaker">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 9v6h4l5 5V4L7 9H3z" fill="white"/>
+        </svg>
+      </button>
+
+      <!-- CAPTION -->
+      <div class="caption">
+        <strong>@john_doe</strong>
+        <p>Feeling calm today 😊</p>
+      </div>
+
+      <!-- SIDE ICONS -->
+      <div class="icon-column">
+  <button class="icon-btn" id="likeBtn">
+    <!-- ❤️ -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M16.792 3.904A4.989 4.989 0 0 0 12 6.343a4.989 4.989 0 0 0-4.792-2.439c-2.73.155-4.808 2.518-4.808 5.25 0 5.63 9.6 10.91 9.6 10.91s9.6-5.28 9.6-10.91c0-2.732-2.078-5.095-4.808-5.25Z"
+        fill="none" stroke="currentColor" stroke-width="1.8"/>
+</svg>
+
+    <span class="count">1.4M</span>
+  </button>
+
+  <button class="icon-btn" id="commentBtn">
+    <!-- 💬 -->
+    <svg viewBox="0 0 24 24">
+  <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"
+        fill="none" stroke="currentColor" stroke-width="1.8"/>
+</svg>
+
+    <span class="count">6,782</span>
+  </button>
+
+  <button class="icon-btn">
+    <!-- ✈️ -->
+    <svg viewBox="0 0 24 24">
+  <path d="M22 2L11 13"
+        fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path d="M22 2L15 22l-4-9-9-4z"
+        fill="none" stroke="currentColor" stroke-width="1.8"/>
+</svg>
+
+  </button>
+
+  <button class="icon-btn">
+    <!-- 🔖 -->
+    <svg viewBox="0 0 24 24">
+  <path d="M6 2h12a2 2 0 0 1 2 2v18l-8-5-8 5V4a2 2 0 0 1 2-2z"
+        fill="none" stroke="currentColor" stroke-width="1.8"/>
+</svg>
+
+  </button>
+
+  <button class="icon-btn">
+    <!-- ⋮ -->
+    <svg viewBox="0 0 24 24">
+  <circle cx="12" cy="5" r="1.5" fill="currentColor"/>
+  <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+  <circle cx="12" cy="19" r="1.5" fill="currentColor"/>
+</svg>
+
+  </button>
+</div>
+</div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <button data-page="home">
+      <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9v9a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg>
+    </button>
+
+    <button>
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="22" y2="22"/></svg>
+    </button>
+
+    <button id="openCreate">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
+    </button>
+
+    <button>
+      <svg viewBox="0 0 24 24"><polygon points="3,3 21,12 3,21"/></svg>
+    </button>
+
+    <button>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4 16-4 16 0"/></svg>
+    </button>
+  </nav>
+
+</div>
+</div>
+
+<!-- CREATE OVERLAY -->
+<div class="overlay hidden" id="createOverlay">
+  <div class="create-box">
+    <input type="file" id="fileInput" accept="video/*">
+    <textarea placeholder="Write a caption..."></textarea>
+    <button>Post</button>
+    <button id="closeCreate">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
